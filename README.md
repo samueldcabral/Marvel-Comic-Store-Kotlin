@@ -1,14 +1,21 @@
 # Marvel Comicbook Store
 
-This is a Comicbook store app using the Marvel Api ( [Checkout at developer.marvel.com](https://developer.marvel.com/) )
+This is a Comicbook store app using the Marvel Api ( [Checkout at developer.marvel.com](https://developer.marvel.com/) ) .
 
-## Project goal, language and resources
+## Personal thoughts
 
-1- Create an Android APP using Kotlin
+This was a very interesting app to build. Lots of challenges specially working with Marvel Api. It's overwhelming at first because you have to deal
+with Public and Private keys, also you must generate a md5 checksum in order to make the api call.
+It was interesting to work with Retrofit and Picasso.
+Lots of new ideas to improve this app and to developer others.
 
-2- Use Retrofit for the API Call
+## Built with
 
-3- Use Picasso library for fetching images from the web
+1- Android Kotlin
+
+2- Retrofit for the API Call
+
+3- Picasso library to fetch images from the web
 
 ## Usage
 
@@ -59,3 +66,6 @@ Checkout page
 ![Checkout page](https://i.imgur.com/wX1EHkW.jpg/ "Checkout page")
 
 
+## License
+
+This project is licensed under the MIT License
