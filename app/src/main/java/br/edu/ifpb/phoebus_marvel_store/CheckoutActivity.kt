@@ -45,9 +45,7 @@ class CheckoutActivity : AppCompatActivity() {
                 title += "${comic.value.title} - $${comic.value.price}"
             }else {
                 title += "${comic.value.title} - $0.00"
-
             }
-
 
             listSelectPlusRareAdapter.add(title)
         }
@@ -56,11 +54,6 @@ class CheckoutActivity : AppCompatActivity() {
             Log.i("APP_MARVEL", "the final list is ${item}")
 
         }
-
-//        Log.i("APP_MARVEL", "Checkout Activity -> listSelected ${listSelected}  size: ${listSelected.size}")
-//        Log.i("APP_MARVEL", "Checkout Activity -> listRareComics ${listRareComics}  size: ${listRareComics.size}")
-
-//        this.listView.adapter = CheckoutAdapter(this, listSelectPlusRareAdapter)
 
         this.listView.adapter = ArrayAdapter<String>(this,android.R.layout.simple_list_item_1, listSelectPlusRareAdapter)
     }

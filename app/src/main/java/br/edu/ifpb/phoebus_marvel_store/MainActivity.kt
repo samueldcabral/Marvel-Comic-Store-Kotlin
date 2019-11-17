@@ -77,49 +77,8 @@ class MainActivity : AppCompatActivity() {
                         var comicResponse = response.body()
                         listComics.addAll(comicResponse?.data!!.results)
                         listRareComics.addAll(getRandomRareComics(listComics.size))
-//
-//                        for(item in listRareComics) {
-//                            Log.i("APP_MARVEL", "position is ${item}")
-//                        }
 
                         (this@MainActivity.listView.adapter as ComicsAdapter).update()
-
-//                        var index = 1
-                        for(comic in listComics) {
-//
-                            Log.i("APP_MARVEL", "${comic.title} - Images: ${comic.images}")
-
-//                            for(price in comic.prices) {
-//                                Log.i("APP_MARVEL", "Prices: $${price.price} - type ${price.type}")
-//                            }
-//
-//                            Log.i("APP_MARVEL", "-------------------------------------------------------")
-
-//                            try{
-//                                var path = "${comic.images.get(0).path}${comic.images.get(0).extension}"
-//                                Log.i("APP_MARVEL", "\npath:  ${path}\n\n")
-//                            } catch (e : Exception) {
-//
-//                            }
-
-//                            if(index == 1 || index == 2) {
-//                                try{
-//                                    Log.i("APP_MARVEL", "get 0: ${result.images.get(0)} - ${result.images.get(0).path} - ${result.images.get(0).extension}")
-//                                }catch (e : Throwable ) {
-//                                    Log.i("APP_MARVEL", "something wrong")
-//                                }
-//                            }
-////                            if(index == 1) {
-////                                Log.i("APP_MARVEL", "get 0: ${result.images}")
-//////                                Log.i("APP_MARVEL", "get 0: ${result.images.get(0)} - ${result.images.get(0).path} - ${result.images.get(0).extension}")
-//////
-//////                                Log.i("APP_MARVEL", "${result.images.get(0).path}${result.images.get(0).extension}")
-////                                index++
-//////                                Picasso.get().load("${result.images.get(0).path}${result.images.get(0).extension}").into(imageView);
-////                            }
-//                            index++
-                        }
-
 
                     } else {
                         Log.e("APP_MARVEL", "Response error or null")
@@ -143,7 +102,6 @@ class MainActivity : AppCompatActivity() {
         for(i in 1..numberOfRareComics){
             listOfRare.add(Random.nextInt(0, size))
         }
-
 
         return listOfRare
     }

@@ -2,6 +2,7 @@ package br.edu.ifpb.phoebus_marvel_store
 
 import android.content.Context
 import android.graphics.Color
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -61,11 +62,10 @@ class ComicsAdapter(var context : Context,
 
         try {
             var path = "${comic.images.get(0).path}.${comic.images.get(0).extension}"
-//            Log.i("APP_MARVEL", "path:  ${path}")
             Picasso.get().load(path).into(ivCapa)
 
         } catch(e : Exception) {
-//            Log.i("APP_MARVEL", "Something wrong this way comes")
+            Log.e("APP_MARVEL", "Exception ${e.printStackTrace()}")
         }
 
         return layout
