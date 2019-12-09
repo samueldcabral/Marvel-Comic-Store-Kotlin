@@ -19,7 +19,7 @@ Lots of new ideas to improve this app and to developer others.
 
 ## Usage
 
-After cloning this repo, you must create a Config.kt file as follows:
+After cloning this repo, you must set your public and private keys in the Config class inside the config package:
 
 ```Kotlin
 package br.edu.ifpb.phoebus_marvel_store.config
@@ -28,8 +28,8 @@ open class Config {
 
     class Keys{
         companion object {
-            const val PUBLIC_KEY = "REPLACE_WITH_YOUR_PUBLIC_KEY"
-            const val PRIVATE_KEY = "REPLACE_WITH_YOUR_PRIVATE_KEY"
+            const val PUBLIC_KEY = "YOUR_PUBLIC_KEY"
+            const val PRIVATE_KEY = "YOUR_PRIVATE_KEY"
         }
     }
 }
